@@ -29,7 +29,8 @@ body,
   display: flex;
   flex: auto;
   flex-direction: column;
-  background-image: url(/src/assets/images/background.jpg);
+  background-color: #2c6749;
+  /* background-image: url(/src/assets/images/background.jpg); */
   /* background-image: url(/src/assets/images/happysun_190218__030.jpg); */
   background-repeat: no-repeat;
   background-position: center;
@@ -172,15 +173,21 @@ body,
 /* Main Layout */
 
 /* UserAttendanceModal */
+.ant-modal-wrap.user-attendance-modal-wrap .ant-modal {
+  top: 10%;
+}
+
 .ant-modal-wrap.user-attendance-modal-wrap .ant-modal-content {
   background-color: unset;
 }
 
 .ant-modal-wrap.user-attendance-modal-wrap .ant-modal-body {
-  min-height: 500px;
-  background-image: url(/src/assets/images/attendance_bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  min-height: 540px !important;
+  background-color: #fff;
+  border-radius: 15px;
+  /* background-image: url(/src/assets/images/attendance_bg.png); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
 }
 
 .user-attendance-modal-title {
@@ -188,25 +195,26 @@ body,
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-top: 20px;
 }
 
 .user-attendance-modal-info {
   text-align: center;
   font-size: 16px;
-  font-family: "Eulyoo1945-SemiBold";
+  font-family: "GmarketSansTTFBold";
   font-weight: bold;
 }
 
 .user-attendance-modal-info .user-name {
-  color: #6f2629;
+  color: #2c6749;
   font-size: 18px;
   font-weight: bold;
 }
 
 .user-attendance-modal-attendance {
   /* height: 200px; */
-  background-color: #cebb9c;
-  border-radius: 6px;
+  /* background-color: #cebb9c; */
+  /* border-radius: 6px; */
   padding: 10px 2px;
 }
 
@@ -223,7 +231,7 @@ body,
 .user-attendance-modal-attendance .stamp-col div {
   text-align: center;
   font-size: 11px;
-  font-family: "Eulyoo1945-Regular";
+  font-family: "GmarketSansTTFLight";
   font-weight: bold;
 }
 
@@ -235,7 +243,7 @@ body,
   margin-top: 10px;
   text-align: center;
   font-size: 13px;
-  font-family: "Eulyoo1945-Regular";
+  font-family: "GmarketSansTTFLight";
   font-weight: bold;
 }
 
@@ -440,6 +448,14 @@ body,
 
 .grid-cell-button {
   border-radius: 20px;
+  background-color: #2c6749;
+  color: #fff;
+}
+.grid-cell-button:hover,
+.grid-cell-button:active,
+.grid-cell-button:focus {
+  background-color: #2c6749;
+  color: #fff;
 }
 
 .ag-cell.ag-cell-not-inline-editing.ag-cell-normal-height.ag-cell-value.ag-cell-focus {

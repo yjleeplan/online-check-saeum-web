@@ -4,7 +4,6 @@ import React from "react";
 const GridCellButton = ({ data, onClick }) => {
   return (
     <Button
-      type="primary"
       size="small"
       className="grid-cell-button"
       onClick={() => onClick({ data })}

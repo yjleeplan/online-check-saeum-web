@@ -8,6 +8,7 @@ import title from "../../../assets/images/title.png";
 import Comments from "../../common/Comments";
 import SearchAttendanceModal from "../../common/modal/SearchAttendanceModal/SearchAttendanceModal";
 import UserAddModal from "../../common/modal/UserAddModal/UserAddModal";
+import VideoPlayer from "../../common/VideoPlayer";
 
 const Main = ({ history, setIsLoading }) => {
   /** State */
@@ -59,7 +60,7 @@ const Main = ({ history, setIsLoading }) => {
     <>
       <Row className="user-attendance-modal-title">
         <Col span={24}>
-          <Image width={192} height={160} src={title} preview={false} />
+          <Image width={220} height={120} src={title} preview={false} />
         </Col>
       </Row>
       <Row className="user-attendance-modal-icon">
@@ -114,7 +115,7 @@ const Main = ({ history, setIsLoading }) => {
           />
         </div>
       </Row>
-      {/* <VideoPlayer /> */}
+      <VideoPlayer />
       <Comments setIsLoading={setIsLoading} />
     </>
   );

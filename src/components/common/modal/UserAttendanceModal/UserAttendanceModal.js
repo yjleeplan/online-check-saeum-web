@@ -3,7 +3,7 @@ import _ from "lodash";
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 import * as api from "../../../../api";
-import title from "../../../../assets/images/title.png";
+import title from "../../../../assets/images/attendance_title.png";
 import Stamp from "../../Stamp";
 
 const { Text } = Typography;
@@ -67,7 +67,7 @@ const UserAttendanceModal = ({ visible, onCancel, userInfo, setIsLoading }) => {
     >
       <Row className="user-attendance-modal-title">
         <Col span={24}>
-          <Image width={192} height={160} src={title} preview={false} />
+          <Image width={220} height={120} src={title} preview={false} />
         </Col>
       </Row>
       <Row className="user-attendance-modal-info">
@@ -100,7 +100,30 @@ const UserAttendanceModal = ({ visible, onCancel, userInfo, setIsLoading }) => {
                 }
               })}
           </Row>
-          <Divider />
+          <Divider dashed={true} />
+          <Row>
+            {!_.isEmpty(userDetail) &&
+              _.map(userDetail.attendance.daylist, (item, index) => {
+                if (index > 5) {
+                  return (
+                    <Col span={4} className="stamp-col" key={index}>
+                      <Stamp
+                        index={index}
+                        attendanceYn={item[`day${Number(index) + 1}`]}
+                        attendanceId={userDetail.attendance.id}
+                        onSelectUser={handleSelectUser}
+                        setIsLoading={setIsLoading}
+                        today={today}
+                        hour={hour}
+                      />
+                    </Col>
+                  );
+                } else {
+                  return "";
+                }
+              })}
+          </Row>
+          <Divider dashed={true} />
           <Row>
             {!_.isEmpty(userDetail) &&
               _.map(userDetail.attendance.daylist, (item, index) => {
