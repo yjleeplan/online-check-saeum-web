@@ -81,9 +81,9 @@ const UserAttendanceModal = ({ visible, onCancel, userInfo, setIsLoading }) => {
           <Row>
             {!_.isEmpty(userDetail) &&
               _.map(userDetail.attendance.daylist, (item, index) => {
-                if (index < 6) {
+                if (index < 7) {
                   return (
-                    <Col span={4} className="stamp-col" key={index}>
+                    <Col flex="1 7" className="stamp-col" key={index}>
                       <Stamp
                         index={index}
                         attendanceYn={item[`day${Number(index) + 1}`]}
@@ -104,9 +104,9 @@ const UserAttendanceModal = ({ visible, onCancel, userInfo, setIsLoading }) => {
           <Row>
             {!_.isEmpty(userDetail) &&
               _.map(userDetail.attendance.daylist, (item, index) => {
-                if (index > 5) {
+                if (6 < index && index < 14) {
                   return (
-                    <Col span={4} className="stamp-col" key={index}>
+                    <Col flex="1 7" className="stamp-col" key={index}>
                       <Stamp
                         index={index}
                         attendanceYn={item[`day${Number(index) + 1}`]}
@@ -127,9 +127,9 @@ const UserAttendanceModal = ({ visible, onCancel, userInfo, setIsLoading }) => {
           <Row>
             {!_.isEmpty(userDetail) &&
               _.map(userDetail.attendance.daylist, (item, index) => {
-                if (index > 5) {
+                if (index > 13) {
                   return (
-                    <Col span={4} className="stamp-col" key={index}>
+                    <Col flex="1 7" className="stamp-col" key={index}>
                       <Stamp
                         index={index}
                         attendanceYn={item[`day${Number(index) + 1}`]}
