@@ -319,20 +319,6 @@ body,
   left: 0;
 }
 
-@media (min-width: 760px) {
-  .video-player-wrapper {
-    width: 80% !important;
-    margin: 0 auto 50px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .video-player-wrapper {
-    width: 60% !important;
-    margin: 0 auto 50px;
-  }
-}
-
 /* VideoPlayer */
 
 /* 댓글 */
