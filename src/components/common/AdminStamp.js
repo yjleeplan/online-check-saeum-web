@@ -5,7 +5,16 @@ import btn1 from "../../assets/images/btn_1.png";
 import btn10 from "../../assets/images/btn_10.png";
 import btn11 from "../../assets/images/btn_11.png";
 import btn12 from "../../assets/images/btn_12.png";
+import btn13 from "../../assets/images/btn_13.png";
+import btn14 from "../../assets/images/btn_14.png";
+import btn15 from "../../assets/images/btn_15.png";
+import btn16 from "../../assets/images/btn_16.png";
+import btn17 from "../../assets/images/btn_17.png";
+import btn18 from "../../assets/images/btn_18.png";
+import btn19 from "../../assets/images/btn_19.png";
 import btn2 from "../../assets/images/btn_2.png";
+import btn20 from "../../assets/images/btn_20.png";
+import btn21 from "../../assets/images/btn_21.png";
 import btn3 from "../../assets/images/btn_3.png";
 import btn4 from "../../assets/images/btn_4.png";
 import btn5 from "../../assets/images/btn_5.png";
@@ -42,6 +51,16 @@ const AdminStamp = ({
       9: "DAY10",
       10: "DAY11",
       11: "DAY12",
+      12: "DAY12",
+      13: "DAY13",
+      14: "DAY14",
+      15: "DAY15",
+      16: "DAY16",
+      17: "DAY17",
+      18: "DAY18",
+      19: "DAY19",
+      20: "DAY20",
+      21: "DAY21",
     }[index];
   };
 
@@ -60,6 +79,15 @@ const AdminStamp = ({
       DAY10: btn10,
       DAY11: btn11,
       DAY12: btn12,
+      DAY13: btn13,
+      DAY14: btn14,
+      DAY15: btn15,
+      DAY16: btn16,
+      DAY17: btn17,
+      DAY18: btn18,
+      DAY19: btn19,
+      DAY20: btn20,
+      DAY21: btn21,
       COMPLETE: complete,
       BONUS: bonus,
       SOON: soon,
