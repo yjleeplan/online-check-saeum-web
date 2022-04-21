@@ -143,16 +143,6 @@ body,
   line-height: 2.8em;
 }
 
-@media (max-width: 767px) {
-  .user-add-modal-wrap .ant-modal {
-    max-width: calc(100vw - 50px);
-  }
-
-  .ant-modal.ant-modal-confirm.ant-modal-confirm-confirm {
-    max-width: calc(100vw - 50px);
-  }
-}
-
 .user-add-modal-wrap .form-item-wrap {
   margin-bottom: 10px;
 }
@@ -199,42 +189,6 @@ body,
   padding-top: 20px;
 }
 
-@media (min-width: 650px) {
-  .user-attendance-modal-title {
-    height: 220px;
-  }
-  .user-attendance-modal-title .ant-image {
-    width: 300px !important;
-    height: 170px !important;
-  }
-  .user-attendance-modal-title .ant-image-img {
-    height: 170px !important;
-  }
-}
-
-@media (min-width: 800px) {
-  .user-attendance-modal-title .ant-image {
-    width: 330px !important;
-    height: 170px !important;
-  }
-  .user-attendance-modal-title .ant-image-img {
-    height: 180px !important;
-  }
-}
-
-@media (min-width: 1000px) {
-  .user-attendance-modal-title {
-    height: 280px;
-  }
-  .user-attendance-modal-title .ant-image {
-    width: 440px !important;
-    height: 240px !important;
-  }
-  .user-attendance-modal-title .ant-image-img {
-    height: 230px !important;
-  }
-}
-
 .user-attendance-modal-info {
   text-align: center;
   font-size: 16px;
@@ -246,29 +200,6 @@ body,
   color: #2c6749;
   font-size: 18px;
   font-weight: bold;
-}
-
-@media (min-width: 900px), (min-height: 800px) {
-  .user-attendance-modal-title {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .user-attendance-modal-info {
-    font-size: 28px;
-  }
-  .user-attendance-modal-info .user-name {
-    font-size: 32px;
-  }
-  .user-attendance-modal-attendance {
-    padding: 60px 2px !important;
-  }
-  .user-attendance-modal-attendance .stamp-col div {
-    font-size: 18px !important;
-  }
-  .user-attendance-modal-attendance-footer {
-    font-size: 20px !important;
-    margin-bottom: 30px;
-  }
 }
 
 .user-attendance-modal-attendance {
@@ -445,20 +376,6 @@ body,
   padding-right: 24px;
 }
 
-@media (min-width: 760px) {
-  #content {
-    width: 60% !important;
-    margin: 0 auto 50px;
-  }
-}
-
-@media (min-width: 1200px) {
-  #content {
-    width: 40% !important;
-    margin: 0 auto 50px;
-  }
-}
-
 /* 댓글 */
 
 /* SearchAttendanceModal */
@@ -484,21 +401,6 @@ body,
     min-height: 500px !important;
   }
 } */
-
-@media (min-width: 900px), (min-height: 800px) {
-  .ant-modal-wrap.search-attendance-modal-wrap .ant-modal {
-    min-width: 700px;
-    top: 100px;
-  }
-  .ant-modal-wrap.search-attendance-modal-wrap .ant-modal-body {
-    min-height: 900px;
-  }
-  .ant-modal-wrap.search-attendance-modal-wrap
-    .ant-modal-body
-    .ag-theme-alpine {
-    min-height: 740px !important;
-  }
-}
 
 .ant-modal-wrap.search-attendance-modal-wrap .search-wrap {
   text-align: center;
@@ -542,11 +444,6 @@ body,
   border: none;
 }
 
-@media (max-width: 767px) {
-  .search-attendance-modal-wrap > .ant-modal {
-    max-width: calc(100vw - 30px);
-  }
-}
 /* SearchAttendanceModal */
 
 /* Admin */
@@ -586,3 +483,185 @@ body,
   -moz-transform: translate3d(0, 0, 0);
 }
 /* Admin */
+
+/* PC */
+@media (min-width: 1024px) {
+  #content {
+    width: 40% !important;
+    margin: 0 auto 50px;
+  }
+  .user-attendance-modal-title {
+    height: 270px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .user-attendance-modal-title .ant-image {
+    width: 380px !important;
+    height: 220px !important;
+  }
+  .user-attendance-modal-title .ant-image-img {
+    height: 220px !important;
+  }
+  .ant-modal-wrap.search-attendance-modal-wrap .ant-modal {
+    min-width: 700px;
+    top: 100px;
+  }
+  .ant-modal-wrap.search-attendance-modal-wrap .ant-modal-body {
+    min-height: 900px;
+  }
+  .ant-modal-wrap.search-attendance-modal-wrap
+    .ant-modal-body
+    .ag-theme-alpine {
+    min-height: 740px !important;
+  }
+  .user-attendance-modal-info {
+    font-size: 28px;
+  }
+  .user-attendance-modal-info .user-name {
+    font-size: 32px;
+  }
+  .user-attendance-modal-attendance {
+    padding: 60px 2px !important;
+  }
+  .user-attendance-modal-attendance .stamp-col div {
+    font-size: 18px !important;
+  }
+  .user-attendance-modal-attendance-footer {
+    font-size: 20px !important;
+    margin-bottom: 30px;
+  }
+}
+
+/* 테블릿 세로 (min-height, landscape가 들어간 이유: 갤럭시탭 가상 키보드 버그) */
+@media (min-height: 800px) and (orientation: landscape),
+  (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  #content {
+    width: 60% !important;
+    margin: 0 auto 50px;
+  }
+  .user-attendance-modal-title {
+    height: 220px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .user-attendance-modal-title .ant-image {
+    width: 330px !important;
+    height: 170px !important;
+  }
+  .user-attendance-modal-title .ant-image-img {
+    height: 180px !important;
+  }
+  .ant-modal-wrap.search-attendance-modal-wrap .ant-modal {
+    min-width: 700px;
+    top: 100px;
+  }
+  .ant-modal-wrap.search-attendance-modal-wrap .ant-modal-body {
+    min-height: 900px;
+  }
+  .ant-modal-wrap.search-attendance-modal-wrap
+    .ant-modal-body
+    .ag-theme-alpine {
+    min-height: 740px !important;
+  }
+  .user-attendance-modal-info {
+    font-size: 28px;
+  }
+  .user-attendance-modal-info .user-name {
+    font-size: 32px;
+  }
+  .user-attendance-modal-attendance {
+    padding: 60px 2px !important;
+  }
+  .user-attendance-modal-attendance .stamp-col div {
+    font-size: 18px !important;
+  }
+  .user-attendance-modal-attendance-footer {
+    font-size: 20px !important;
+    margin-bottom: 30px;
+  }
+}
+
+/* 테블릿 가로 */
+@media (min-width: 899px) and (max-width: 1023px) and (orientation: landscape) {
+  #content {
+    width: 60% !important;
+    margin: 0 auto 50px;
+  }
+  .user-attendance-modal-title {
+    height: 270px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .user-attendance-modal-title .ant-image {
+    width: 380px !important;
+    height: 220px !important;
+  }
+  .user-attendance-modal-title .ant-image-img {
+    height: 220px !important;
+  }
+  .ant-modal-wrap.search-attendance-modal-wrap .ant-modal {
+    min-width: 700px;
+    top: 100px;
+  }
+  .ant-modal-wrap.search-attendance-modal-wrap .ant-modal-body {
+    min-height: 900px;
+  }
+  .ant-modal-wrap.search-attendance-modal-wrap
+    .ant-modal-body
+    .ag-theme-alpine {
+    min-height: 740px !important;
+  }
+  .user-attendance-modal-info {
+    font-size: 28px;
+  }
+  .user-attendance-modal-info .user-name {
+    font-size: 32px;
+  }
+  .user-attendance-modal-attendance {
+    padding: 60px 2px !important;
+  }
+  .user-attendance-modal-attendance .stamp-col div {
+    font-size: 18px !important;
+  }
+  .user-attendance-modal-attendance-footer {
+    font-size: 20px !important;
+    margin-bottom: 30px;
+  }
+}
+
+/* 모바일 가로 */
+@media (min-width: 480px) and (max-width: 896px) and (orientation: landscape) {
+  #content {
+    width: 60% !important;
+    margin: 0 auto 50px;
+  }
+  .user-attendance-modal-title {
+    height: 220px;
+  }
+  .user-attendance-modal-title .ant-image {
+    width: 380px !important;
+    height: 180px !important;
+  }
+  .user-attendance-modal-title .ant-image-img {
+    height: 180px !important;
+  }
+  .search-attendance-modal-wrap > .ant-modal {
+    max-width: calc(100vw - 30px);
+  }
+  .user-add-modal-wrap .ant-modal {
+    max-width: calc(100vw - 50px);
+  }
+  .ant-modal.ant-modal-confirm.ant-modal-confirm-confirm {
+    max-width: calc(100vw - 50px);
+  }
+}
+
+/* 모바일 세로 */
+@media (max-width: 480px) and (orientation: portrait) {
+  .user-add-modal-wrap .ant-modal {
+    max-width: calc(100vw - 50px);
+  }
+  .ant-modal.ant-modal-confirm.ant-modal-confirm-confirm {
+    max-width: calc(100vw - 50px);
+  }
+}
