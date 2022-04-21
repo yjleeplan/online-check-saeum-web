@@ -185,6 +185,7 @@ body,
   min-height: 540px !important;
   background-color: #fff;
   border-radius: 15px;
+  padding: 24px 12px;
   /* background-image: url(/src/assets/images/attendance_bg.png); */
   /* background-repeat: no-repeat; */
   /* background-size: cover; */
@@ -198,6 +199,42 @@ body,
   padding-top: 20px;
 }
 
+@media (min-width: 650px) {
+  .user-attendance-modal-title {
+    height: 220px;
+  }
+  .user-attendance-modal-title .ant-image {
+    width: 300px !important;
+    height: 170px !important;
+  }
+  .user-attendance-modal-title .ant-image-img {
+    height: 170px !important;
+  }
+}
+
+@media (min-width: 800px) {
+  .user-attendance-modal-title .ant-image {
+    width: 330px !important;
+    height: 170px !important;
+  }
+  .user-attendance-modal-title .ant-image-img {
+    height: 180px !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  .user-attendance-modal-title {
+    height: 280px;
+  }
+  .user-attendance-modal-title .ant-image {
+    width: 440px !important;
+    height: 240px !important;
+  }
+  .user-attendance-modal-title .ant-image-img {
+    height: 230px !important;
+  }
+}
+
 .user-attendance-modal-info {
   text-align: center;
   font-size: 16px;
@@ -209,6 +246,29 @@ body,
   color: #2c6749;
   font-size: 18px;
   font-weight: bold;
+}
+
+@media (min-width: 900px), (min-height: 800px) {
+  .user-attendance-modal-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .user-attendance-modal-info {
+    font-size: 28px;
+  }
+  .user-attendance-modal-info .user-name {
+    font-size: 32px;
+  }
+  .user-attendance-modal-attendance {
+    padding: 60px 2px !important;
+  }
+  .user-attendance-modal-attendance .stamp-col div {
+    font-size: 18px !important;
+  }
+  .user-attendance-modal-attendance-footer {
+    font-size: 20px !important;
+    margin-bottom: 30px;
+  }
 }
 
 .user-attendance-modal-attendance {
@@ -319,20 +379,6 @@ body,
   left: 0;
 }
 
-@media (min-width: 760px) {
-  .video-player-wrapper {
-    width: 80% !important;
-    margin: 0 auto 50px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .video-player-wrapper {
-    width: 60% !important;
-    margin: 0 auto 50px;
-  }
-}
-
 /* VideoPlayer */
 
 /* 댓글 */
@@ -418,6 +464,40 @@ body,
 /* SearchAttendanceModal */
 .ant-modal-wrap.search-attendance-modal-wrap .ant-modal-body {
   min-height: 380px;
+}
+
+.ant-modal-wrap.search-attendance-modal-wrap .ant-modal,
+.ant-modal-wrap.search-attendance-modal-wrap .ant-modal-content {
+  border-radius: 15px;
+}
+.ant-modal-wrap.search-attendance-modal-wrap .ant-modal-header {
+  border-radius: 15px 15px 0 0;
+}
+
+/* @media (min-height: 800px) {
+  .ant-modal-wrap.search-attendance-modal-wrap .ant-modal-body {
+    min-height: 650px;
+  }
+  .ant-modal-wrap.search-attendance-modal-wrap
+    .ant-modal-body
+    .ag-theme-alpine {
+    min-height: 500px !important;
+  }
+} */
+
+@media (min-width: 900px), (min-height: 800px) {
+  .ant-modal-wrap.search-attendance-modal-wrap .ant-modal {
+    min-width: 700px;
+    top: 100px;
+  }
+  .ant-modal-wrap.search-attendance-modal-wrap .ant-modal-body {
+    min-height: 900px;
+  }
+  .ant-modal-wrap.search-attendance-modal-wrap
+    .ant-modal-body
+    .ag-theme-alpine {
+    min-height: 740px !important;
+  }
 }
 
 .ant-modal-wrap.search-attendance-modal-wrap .search-wrap {
