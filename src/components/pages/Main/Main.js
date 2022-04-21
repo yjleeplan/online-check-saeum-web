@@ -8,7 +8,7 @@ import title from "../../../assets/images/title.png";
 import Comments from "../../common/Comments";
 import SearchAttendanceModal from "../../common/modal/SearchAttendanceModal/SearchAttendanceModal";
 import UserAddModal from "../../common/modal/UserAddModal/UserAddModal";
-import VideoPlayer from "../../common/VideoPlayer";
+// import VideoPlayer from "../../common/VideoPlayer";
 
 const Main = ({ history, setIsLoading }) => {
   /** State */
@@ -63,6 +63,9 @@ const Main = ({ history, setIsLoading }) => {
           <Image width={220} height={120} src={title} preview={false} />
         </Col>
       </Row>
+      <Row className="user-attendance-modal-subtitle">
+        <Col span={24}>5.1(일) ~ 5.21(토), 3주간</Col>
+      </Row>
       <Row className="user-attendance-modal-icon">
         <Col span={6} onClick={handleUserAddModalOpen} className="icon-wrap">
           <Image
@@ -115,7 +118,7 @@ const Main = ({ history, setIsLoading }) => {
           />
         </div>
       </Row>
-      <VideoPlayer />
+      {/* <VideoPlayer /> */}
       <Comments setIsLoading={setIsLoading} />
     </>
   );

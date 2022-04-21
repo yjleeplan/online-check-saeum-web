@@ -185,8 +185,14 @@ body,
   height: 160px;
   text-align: center;
   margin-top: 10px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   padding-top: 20px;
+}
+
+.user-attendance-modal-subtitle {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .user-attendance-modal-info {
@@ -493,7 +499,10 @@ body,
   .user-attendance-modal-title {
     height: 270px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+  }
+  .user-attendance-modal-subtitle {
+    font-size: 18px;
   }
   .user-attendance-modal-title .ant-image {
     width: 380px !important;
@@ -542,7 +551,10 @@ body,
   .user-attendance-modal-title {
     height: 220px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+  }
+  .user-attendance-modal-subtitle {
+    font-size: 18px;
   }
   .user-attendance-modal-title .ant-image {
     width: 330px !important;
@@ -590,7 +602,10 @@ body,
   .user-attendance-modal-title {
     height: 270px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+  }
+  .user-attendance-modal-subtitle {
+    font-size: 18px;
   }
   .user-attendance-modal-title .ant-image {
     width: 380px !important;
@@ -637,6 +652,9 @@ body,
   }
   .user-attendance-modal-title {
     height: 220px;
+  }
+  .user-attendance-modal-subtitle {
+    font-size: 18px;
   }
   .user-attendance-modal-title .ant-image {
     width: 380px !important;
