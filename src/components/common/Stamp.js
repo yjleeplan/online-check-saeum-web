@@ -1,5 +1,4 @@
-import { Image, message } from "antd";
-import _ from "lodash";
+import { Image, message, Modal } from "antd";
 import React from "react";
 import * as api from "../../api";
 import btn1 from "../../assets/images/btn_1.png";
@@ -26,16 +25,7 @@ import btn9 from "../../assets/images/btn_9.png";
 import bonus from "../../assets/images/btn_bonus.png";
 import complete from "../../assets/images/btn_complete.png";
 import soon from "../../assets/images/btn_soon.png";
-import {
-  ATTENDANCE_END_HOUR,
-  ATTENDANCE_START_HOUR,
-  BONUS_DAYS,
-  BONUS_END_HOUR,
-  BONUS_START_HOUR,
-  IS_BONUS,
-  IS_COMPLETE,
-  IS_NOT_COMPLETE,
-} from "../../context/Context";
+import { IS_COMPLETE } from "../../context/Context";
 
 const Stamp = ({
   index,
@@ -47,30 +37,31 @@ const Stamp = ({
   hour,
 }) => {
   // 금일자 컬럼 Formatter
-  const todayFormatter = (today) => {
+  const indexFormatter = (index) => {
     return {
-      1: "day1",
-      2: "day2",
-      3: "day3",
-      4: "day4",
-      5: "day5",
-      6: "day6",
-      7: "day7",
-      8: "day8",
-      9: "day9",
-      10: "day10",
-      11: "day11",
-      12: "day12",
-      13: "day13",
-      14: "day14",
-      15: "day15",
-      16: "day16",
-      17: "day17",
-      18: "day18",
-      19: "day19",
-      20: "day20",
-      21: "day21",
-    }[today];
+      0: "DAY1",
+      1: "DAY2",
+      2: "DAY3",
+      3: "DAY4",
+      4: "DAY5",
+      5: "DAY6",
+      6: "DAY7",
+      7: "DAY8",
+      8: "DAY9",
+      9: "DAY10",
+      10: "DAY11",
+      11: "DAY12",
+      12: "DAY12",
+      13: "DAY13",
+      14: "DAY14",
+      15: "DAY15",
+      16: "DAY16",
+      17: "DAY17",
+      18: "DAY18",
+      19: "DAY19",
+      20: "DAY20",
+      21: "DAY21",
+    }[index];
   };
 
   // 스탬프 Formatter
@@ -107,15 +98,7 @@ const Stamp = ({
   const stampType = () => {
     let type = IS_COMPLETE(attendanceYn);
     if (!type) {
-      if (
-        _.includes(BONUS_DAYS, today) &&
-        BONUS_START_HOUR <= hour &&
-        hour < BONUS_END_HOUR
-      ) {
-        type = IS_BONUS(index, today);
-      } else {
-        type = IS_NOT_COMPLETE(index, today);
-      }
+      type = indexFormatter(index);
     }
 
     return type;
@@ -141,46 +124,36 @@ const Stamp = ({
   };
 
   // 출석
-  const handleUpdatedAttendance = async () => {
-    try {
-      if (isUpdateEnable()) {
-        if (
-          _.includes(BONUS_DAYS, today) &&
-          BONUS_START_HOUR <= hour &&
-          hour < BONUS_END_HOUR
-        ) {
+  const handleUpdatedAttendance = () => {
+    Modal.confirm({
+      title: `${index + 1}일차`,
+      content:
+        attendanceYn === "N"
+          ? "출석 처리하시겠습니까?"
+          : "결석 처리하시겠습니까?",
+      okText: "확인",
+      cancelText: "취소",
+      onOk: async () => {
+        try {
           setIsLoading(true);
+
+          const value = attendanceYn === "N" ? "Y" : "N";
 
           await api.updatedAttendance({
             path: { attendance_id: attendanceId },
-            data: { [`day${Number(index) + 1}`]: "B2" },
+            data: { [`day${Number(index) + 1}`]: value },
           });
 
           onSelectUser();
-        } else {
-          if (todayFormatter(today) === `day${Number(index) + 1}`) {
-            if (ATTENDANCE_START_HOUR <= hour && hour < ATTENDANCE_END_HOUR) {
-              setIsLoading(true);
-
-              await api.updatedAttendance({
-                path: { attendance_id: attendanceId },
-                data: { [`day${Number(index) + 1}`]: "Y" },
-              });
-
-              onSelectUser();
-            } else {
-              message.warning("출석은 04:00 ~ 08:00 사이에만 가능합니다.");
-            }
-          }
+        } catch (error) {
+          message.error(
+            error.response ? `${error.response.data.message}` : "출석 실패"
+          );
+        } finally {
+          setIsLoading(false);
         }
-      }
-    } catch (error) {
-      message.error(
-        error.response ? `${error.response.data.message}` : "출석 실패"
-      );
-    } finally {
-      setIsLoading(false);
-    }
+      },
+    });
   };
 
   return (

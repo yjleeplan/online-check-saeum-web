@@ -51,9 +51,9 @@ const Main = ({ history, setIsLoading }) => {
     );
   };
 
-  // 사진 링크
+  // 추천찬양 링크
   const handlePictureClick = () => {
-    window.open("http://naver.me/FUGfHWej");
+    window.open("https://youtu.be/QbUo6F0soe0");
   };
 
   return (

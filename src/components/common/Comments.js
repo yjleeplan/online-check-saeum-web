@@ -159,7 +159,7 @@ const Comments = ({ setIsLoading }) => {
       <Card
         className="comment-add-wrap"
         bordered={false}
-        title={`"특별새벽부흥회를 통해 받은 은혜를 나눠주세요!"`}
+        title={`"가정예배 4행시를 올려주세요! 추첨을 통해 아이스크림 쿠폰을 드립니다!"`}
       >
         <Comment
           content={

@@ -151,10 +151,12 @@ const UserAttendanceModal = ({ visible, onCancel, userInfo, setIsLoading }) => {
       <Row className="user-attendance-modal-attendance-footer">
         <Col span={24}>
           <Row>
-            <Col span={24}>※ 금일자 도장을 누르시면 출석이 완료됩니다.</Col>
+            <Col span={24}>
+              ※ 예배 드리신 일자를 누르시면 출석이 완료됩니다.
+            </Col>
           </Row>
           <Row>
-            <Col span={24}>※ 출석은 당일 오전8시까지만 가능합니다.</Col>
+            <Col span={24}>※ 출석을 취소하시려면 출석 스티커를 눌러주세요.</Col>
           </Row>
         </Col>
       </Row>
