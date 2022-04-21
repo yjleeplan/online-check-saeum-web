@@ -111,18 +111,6 @@ const Stamp = ({
     return stampFormatter(type);
   };
 
-  // 출석 체크 가능 여부
-  const isUpdateEnable = () => {
-    const type = stampType();
-    let result = true;
-
-    if (type === "COMPLETE" || type === "BONUS" || type === "SOON") {
-      result = false;
-    }
-
-    return result;
-  };
-
   // 출석
   const handleUpdatedAttendance = () => {
     Modal.confirm({
