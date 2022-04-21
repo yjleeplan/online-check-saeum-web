@@ -29,9 +29,9 @@ const UserAddModal = ({ visible, onCancel, setIsLoading }) => {
   // Form Submit
   const onFinish = (values) => {
     const params = {
-      name: values.name,
+      name: `${values.name} 가정`,
       // birthday : `${values.year}-${values.month}-${values.day}`,
-      // department: values.department,
+      department: "소속없음",
     };
 
     Modal.confirm({
