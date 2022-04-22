@@ -1,4 +1,4 @@
-import { Col, Image, Row } from "antd";
+import { Col, Image, message, Row } from "antd";
 import React, { useState } from "react";
 import iconAttendance from "../../../assets/images/icon_attendance.png";
 import iconPicture from "../../../assets/images/icon_picture.png";
@@ -46,9 +46,10 @@ const Main = ({ history, setIsLoading }) => {
 
   // 영상 링크
   const handleVideoClick = () => {
-    window.open(
-      "https://youtube.com/playlist?list=PLFdkyNDzHdpNVq4q7eDzTQcrHnkVvRs0R"
-    );
+    message.info("아직 준비중입니다.");
+    // window.open(
+    //   "https://youtube.com/playlist?list=PLFdkyNDzHdpNVq4q7eDzTQcrHnkVvRs0R"
+    // );
   };
 
   // 추천찬양 링크
