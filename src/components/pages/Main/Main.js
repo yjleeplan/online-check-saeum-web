@@ -54,7 +54,9 @@ const Main = ({ history, setIsLoading }) => {
 
   // 추천찬양 링크
   const handlePictureClick = () => {
-    window.open("https://youtu.be/QbUo6F0soe0");
+    window.open(
+      "https://youtube.com/playlist?list=PLZPn8VpgVwhkwwf5W8adA5Im7B5qKEuEW"
+    );
   };
 
   return (
