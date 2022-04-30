@@ -1,4 +1,4 @@
-import { Col, Image, message, Row } from "antd";
+import { Col, Image, Row } from "antd";
 import React, { useState } from "react";
 import iconAttendance from "../../../assets/images/icon_attendance.png";
 import iconPicture from "../../../assets/images/icon_picture.png";
@@ -8,7 +8,7 @@ import title from "../../../assets/images/title.png";
 import Comments from "../../common/Comments";
 import SearchAttendanceModal from "../../common/modal/SearchAttendanceModal/SearchAttendanceModal";
 import UserAddModal from "../../common/modal/UserAddModal/UserAddModal";
-// import VideoPlayer from "../../common/VideoPlayer";
+import VideoPlayer from "../../common/VideoPlayer";
 
 const Main = ({ history, setIsLoading }) => {
   /** State */
@@ -46,10 +46,8 @@ const Main = ({ history, setIsLoading }) => {
 
   // 영상 링크
   const handleVideoClick = () => {
-    message.info("아직 준비중입니다.");
-    // window.open(
-    //   "https://youtube.com/playlist?list=PLFdkyNDzHdpNVq4q7eDzTQcrHnkVvRs0R"
-    // );
+    //message.info("아직 준비중입니다.");
+    window.open("https://youtu.be/OFoOeh4K51M");
   };
 
   // 추천찬양 링크
@@ -121,7 +119,7 @@ const Main = ({ history, setIsLoading }) => {
           />
         </div>
       </Row>
-      {/* <VideoPlayer /> */}
+      <VideoPlayer />
       <Comments setIsLoading={setIsLoading} />
     </>
   );
