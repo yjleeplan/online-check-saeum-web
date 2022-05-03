@@ -159,7 +159,7 @@ const Comments = ({ setIsLoading }) => {
       <Card
         className="comment-add-wrap"
         bordered={false}
-        title={`"가정 예배를 기대하는 마음과 응원의 메세지를 적어주세요"`}
+        title={`"가정 예배를 드리면서 받은 은혜를 나누어주세요."`}
       >
         <Comment
           content={
