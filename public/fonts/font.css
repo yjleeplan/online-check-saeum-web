@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "GmarketSansTTFLight";
+  /* src: url('./GmarketSansTTFLight.otf') format('opentype'); */
+  src: url("./GmarketSansTTFLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GmarketSansTTFBold";
+  /* src: url('./GmarketSansTTFLight.otf') format('opentype'); */
+  src: url("./GmarketSansTTFBold.ttf") format("truetype");
+}
